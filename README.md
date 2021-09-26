@@ -38,7 +38,7 @@ List from video:
 
 ## My Submission
 
-[My 1st code challenge](challenge_1.txt) -
+[My 1st code challenge](challenge_1.txt) - Traverse a linked list recursively and return the largest value
 
 [My 2nd code challenge](challenge_2.txt) -
 
