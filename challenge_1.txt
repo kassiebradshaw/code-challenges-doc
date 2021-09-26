@@ -1,0 +1,51 @@
+PROBLEM DOMAIN:
+
+Iterate a linked list recursively and return the largest value
+
+--------------------------------------------------------------------
+EDGE CASES:
+
+- What if the linked list is empty?
+
+--------------------------------------------------------------------
+INPUT: Linked List
+OUTPUT: Integer
+
+--------------------------------------------------------------------
+VISUAL: 
+
+Example Input--> [7] -> [2] -> [13] -> [9] -> [3] -> None
+Expected Output --> 13
+
+--------------------------------------------------------------------
+BIG O NOTATION:
+
+Time --> O(n)
+Space --> O(1)
+
+--------------------------------------------------------------------
+ALGORITHM:
+
+- Declare a function that takes a node as a parameter
+- Create a temp variable to hold max_val
+- Check base case: if node is None, return max_val
+- If current node's value is greater than max_val, reassign max_val to current value
+- Call function on next node
+
+
+--------------------------------------------------------------------
+PSEUDOCODE:
+
+--------------------------------------------------------------------
+CODE:
+def iterate_linked_list_recursively(input_node, largest = 0):
+    if input_node is None:
+        return largest
+    else:
+        if input_node.value > largest
+            largest = input_node.value
+        iterate_linked_list_recursively(input_node.next, largest)
+    
+
+--------------------------------------------------------------------
+TESTING:
