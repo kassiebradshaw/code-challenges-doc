@@ -38,14 +38,15 @@ PSEUDOCODE:
 
 --------------------------------------------------------------------
 CODE:
+
 def iterate_linked_list_recursively(input_node, largest = 0):
     if input_node is None:
         return largest
-    else:
-        if input_node.value > largest
-            largest = input_node.value
-        iterate_linked_list_recursively(input_node.next, largest)
     
+    if input_node.value > largest:
+        largest = input_node.value
+
+    return iterate_linked_list_recursively(input_node.next, largest)
 
 --------------------------------------------------------------------
 TESTING:
