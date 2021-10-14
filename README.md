@@ -38,8 +38,8 @@ List from video:
 
 ## My Submission
 
-[My 1st code challenge](challenge_1.txt) -
+[My 1st code challenge](challenge_1.txt) - Traverse a linked list recursively and return the largest value
 
-[My 2nd code challenge](challenge_2.txt) -
+[My 2nd code challenge](challenge_2.txt) - Given a Binary Tree, Find the maximum value RECURSIVELY
 
-[My 3rd code challenge](challenge_3.txt) -
+[My 3rd code challenge](challenge_3.txt) - Given a Queue, determine if a specific value is present RECURSIVELY
