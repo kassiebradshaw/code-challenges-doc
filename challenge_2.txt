@@ -1,0 +1,85 @@
+PROBLEM DOMAIN
+
+Given a Binary Tree, Find the maximum value RECURSIVELY
+
+----------------------------------------------------------
+
+EDGE CASES
+
+* Empty Tree?
+
+----------------------------------------------------------
+
+INPUT: Binary Tree
+OUTPUT: Integer
+
+----------------------------------------------------------
+
+VISUAL
+
+Input:                  [5] 
+                      /     \     
+                   [14]     [3]    
+                   / \      /  \   
+                [4]  [25] [1]  [19]
+
+Expected Output: 25
+
+----------------------------------------------------------
+
+BIG O
+
+Time: O(n)
+Space: O(1)
+
+----------------------------------------------------------
+
+ALGORITHM / PSEUDOCODE
+
+- Define a function that takes in a Binary Tree
+- If tree has no root, return None
+- Declare max variable and assign it value of root of Tree
+- Define a walk function that takes a node as a parameter
+    - If node is not None
+        - if node value is greater than max variable
+            - reassign max variable
+        - walk node left
+        - walk node right
+- Invoke the walk function on the tree's root
+- Return the max variable
+
+----------------------------------------------------------
+
+CODE
+
+def max_value(BinaryTree):
+    if BinaryTree.root is None:
+        return None
+    max = BinaryTree.root.value
+
+    def walk(node):
+        if node is not None:
+            if node.value > max:
+                max = node.value
+            walk(node.left)
+            walk(node.right)
+    
+    walk(self.root)
+    return max
+
+----------------------------------------------------------
+
+TESTING
+
+Input:                  [5] 
+                      /     \     
+                   [14]     [3]    
+                   / \      /  \   
+                [4]  [25] [1]  [19]
+
+Expected Output: 25
+
+Input: Empty Tree
+
+Expected Output: None
+

@@ -1,0 +1,60 @@
+PROBLEM DOMAIN:
+
+Given a Queue, determine if a specific value is present RECURSIVELY
+
+--------------------------------------------------------------------
+EDGE CASES:
+
+- Duplicate values in queue?
+- Queue is empty?
+
+--------------------------------------------------------------------
+INPUT: Queue, Integer
+OUTPUT: Boolean
+
+--------------------------------------------------------------------
+VISUAL: 
+
+Example Input: 4
+
+QUEUE:
+Back                       Front
+--> | 5 | 19 | 13 | 4 | 12 | 9 |
+
+Expected Output: True
+--------------------------------------------------------------------
+BIG O NOTATION:
+
+Time --> O(n)
+Space --> O(1)
+
+--------------------------------------------------------------------
+ALGORITHM/PSEUDOCODE:
+
+- Define a function that takes in a queue and the value we're searching Front
+- If queue is empty, return False
+- Define walk function that takes a node as a paramenter
+    -- if node exists
+      -- if node.value == value, return True
+    walk(node.next)
+- Call walk function on queue.front
+Otherwise return False
+
+--------------------------------------------------------------------
+CODE:
+
+def find_value(Queue, value):
+    if queue.front is None:
+        return False
+    def walk(node):
+        if node:
+            if node.value == value:
+                return True
+        walk(node.next)
+    
+    walk(Queue.front)
+    return False
+
+--------------------------------------------------------------------
+TESTING:
+
